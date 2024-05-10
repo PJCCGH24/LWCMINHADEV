@@ -1,0 +1,69 @@
+<template>
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-button-menu alternative-text="Show menu" variant="border-filled" onselect={handleOnselect}>
+            <lightning-menu-item value="integration" label="Integration"></lightning-menu-item>
+            <lightning-menu-item value="salesforceLWC" label="Salesforce LWC"></lightning-menu-item>
+            <lightning-menu-item value="auraComponent" label="Aura Component"></lightning-menu-item>
+            <lightning-menu-item value="salesforceTrigger" label="Salesforce Trigger"></lightning-menu-item>
+        </lightning-button-menu>
+
+        <span style=" display:inline-block; margin-left:10px;">The value of the menu item you <strong> Selected is:-
+            </strong> <span class="slds-text-heading_small" style="color:#ff0000; font-weight:bold;">{selectedItemValue}
+                →</span></span>
+    </div>
+
+
+    <div class="slds-col slds-size_10-of-12">
+        <template if:true={integrationVal}>
+            <h3 class="slds-text-heading_medium slds-text-color--error"><strong><a
+                        href="https://www.w3web.net/aws-s3-integration-step-by-step-in-salesforce/" target="_blank"
+                        rel="noopener noreferrer">Salesforce IntegrationVal</a></strong></h3>
+            <p>How to Integrate Amazon S3 into Salesforce Uses of Named Credentials and checked the results Status=OK,
+                StatusCode=200 after connected Amazon AWS S3 through the anonymous window in Salesforce | Integrate aws
+                s3 using named credentials in Salesforce. <span class="readMore"><a
+                        href="https://www.w3web.net/aws-s3-integration-step-by-step-in-salesforce/" target="_blank"
+                        rel="noopener noreferrer">more...</a></span></p>
+
+        </template>
+
+
+        <template if:true={salesforceLWCVal}>
+            <h3 class="slds-text-heading_medium slds-text-color--error"><strong><a
+                        href="https://www.w3web.net/lwc-fetch-picklist-values-without-apex-in-salesforce/"
+                        target="_blank" rel="noopener noreferrer">Salesforce LWC</a></strong></h3>
+            <p>Retrieve picklist values dynamically of Opportunity Object without apex class using ‘uiObjectInfoApi’
+                property and displaying the selected pick-list value in Salesforce Lightning Component — LWC. <span
+                    class="readMore"><a
+                        href="https://www.w3web.net/lwc-fetch-picklist-values-without-apex-in-salesforce/"
+                        target="_blank" rel="noopener noreferrer">more...</a></span></p>
+
+        </template>
+
+
+        <template if:true={auraComponentVal}>
+            <h3 class="slds-text-heading_medium slds-text-color--error"><strong><a
+                        href="https://www.w3web.net/tutorial/lightning-component/" target="_blank"
+                        rel="noopener noreferrer">Aura Component</a></strong></h3>
+            <p>The Lightning Component framework is a UI framework for developing web apps for mobile and desktop
+                devices. It's a modern framework for building single-page applications with dynamic, responsive user
+                interfaces for Lightning Platform apps. To live demo project learn <span class="readMore"><a
+                        href="https://www.w3web.net/tutorial/lightning-component/" target="_blank"
+                        rel="noopener noreferrer">more...</a></span></p>
+
+        </template>
+
+        <template if:true={salesforceTriggerVal}>
+            <h3 class="slds-text-heading_medium slds-text-color--error"><strong><a
+                        href="https://www.w3web.net/trigger-to-update-account-phone-with-contact-phone/" target="_blank"
+                        rel="noopener noreferrer">Salesforce Trigger</a></strong></h3>
+            <p> today in this post we are going to learn about How to Write a trigger to update parent account phone
+                number when ever the contact phone number is updated using trigger handler and helper class in
+                Salesforce.</p>
+            <p><strong>Real time scenarios:-</strong> Write a trigger on Contact to update the parent Account Phone
+                number when ever the Contact Phone is updated through trigger handler and helper class in Salesforce.
+                <span class="readMore"><a
+                        href="https://www.w3web.net/trigger-to-update-account-phone-with-contact-phone/" target="_blank"
+                        rel="noopener noreferrer">more...</a></span></p>
+        </template>
+    </div>
+</template>
